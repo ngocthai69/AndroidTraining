@@ -8,13 +8,13 @@ import android.support.v7.widget.Toolbar;
 import android.thaihn.androidadvance.BaseActivity;
 import android.thaihn.androidadvance.R;
 import android.view.MenuItem;
-import android.widget.Toast;
 
 public class TabLayoutActivity extends BaseActivity {
 
     private Toolbar mToolbar;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
+    private CircleIndicator mIndicator;
 
     @Override
     protected int getLayoutResources() {
@@ -26,6 +26,7 @@ public class TabLayoutActivity extends BaseActivity {
         mToolbar = findViewById(R.id.toolbar);
         mTabLayout = findViewById(R.id.tabs);
         mViewPager = findViewById(R.id.viewpager);
+        mIndicator = findViewById(R.id.indicators);
     }
 
     @Override
@@ -57,11 +58,11 @@ public class TabLayoutActivity extends BaseActivity {
     private void setupViewPager() {
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(adapter);
+        mIndicator.setViewPager(mViewPager);
         mViewPager.setCurrentItem(0);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                Toast.makeText(TabLayoutActivity.this, "page " + position, Toast.LENGTH_SHORT).show();
             }
 
             @Override

@@ -19,7 +19,6 @@ public class HomeFragment extends BaseFragment {
 
     private int mPage;
     private String mTitle;
-    private TextView mText;
 
     public HomeFragment() {
         // Required empty public constructor
@@ -55,11 +54,9 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected void initVariables(Bundle saveInstanceState, View rootView) {
-        mText = (TextView) rootView.findViewById(R.id.text);
     }
 
     @Override
     protected void initData(Bundle saveInstanceState) {
-        mText.setText("Page " + mPage + " ----- Title" + mTitle);
     }
 }
