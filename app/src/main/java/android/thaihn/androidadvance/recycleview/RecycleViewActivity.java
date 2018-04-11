@@ -23,7 +23,7 @@ public class RecycleViewActivity extends BaseActivity implements ContactAdapter.
     private ContactAdapter mContactAdapter;
     protected Handler handler;
 
-    private SwipeRefreshLayout mSwiperRefesh;
+//    private SwipeRefreshLayout mSwiperRefesh;
     private RecyclerView mRecycle;
     private Toolbar mToolbar;
 
@@ -37,7 +37,7 @@ public class RecycleViewActivity extends BaseActivity implements ContactAdapter.
     @Override
     protected void initVariables(Bundle savedInstanceState) {
         mRecycle = findViewById(R.id.recycle_contact);
-        mSwiperRefesh = findViewById(R.id.swipe);
+//        mSwiperRefesh = findViewById(R.id.swipe);
         mToolbar = findViewById(R.id.toolbar);
     }
 
@@ -51,21 +51,21 @@ public class RecycleViewActivity extends BaseActivity implements ContactAdapter.
 
         handler = new Handler();
 
-        mSwiperRefesh.setColorSchemeResources(
-                R.color.md_red_700,
-                R.color.md_purple_700,
-                R.color.md_teal_700,
-                R.color.md_lime_700);
-        mSwiperRefesh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                mSwiperRefesh.setRefreshing(true);
-                mContactAdapter.setListContact(makeListContact(30));
-                mContactAdapter.notifyDataSetChanged();
-                Toast.makeText(RecycleViewActivity.this, "Loaded", Toast.LENGTH_SHORT).show();
-                mSwiperRefesh.setRefreshing(false);
-            }
-        });
+//        mSwiperRefesh.setColorSchemeResources(
+//                R.color.md_red_700,
+//                R.color.md_purple_700,
+//                R.color.md_teal_700,
+//                R.color.md_lime_700);
+//        mSwiperRefesh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+//            @Override
+//            public void onRefresh() {
+//                mSwiperRefesh.setRefreshing(true);
+//                mContactAdapter.setListContact(makeListContact(30));
+//                mContactAdapter.notifyDataSetChanged();
+//                Toast.makeText(RecycleViewActivity.this, "Loaded", Toast.LENGTH_SHORT).show();
+//                mSwiperRefesh.setRefreshing(false);
+//            }
+//        });
 
         createRecycleView(this);
     }

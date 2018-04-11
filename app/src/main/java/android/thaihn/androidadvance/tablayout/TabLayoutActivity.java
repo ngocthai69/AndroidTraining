@@ -7,6 +7,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.widget.Toolbar;
 import android.thaihn.androidadvance.BaseActivity;
 import android.thaihn.androidadvance.R;
+import android.thaihn.androidadvance.animation.DepthPageTransformer;
 import android.view.MenuItem;
 
 public class TabLayoutActivity extends BaseActivity {
@@ -60,6 +61,7 @@ public class TabLayoutActivity extends BaseActivity {
         mViewPager.setAdapter(adapter);
         mIndicator.setViewPager(mViewPager);
         mViewPager.setCurrentItem(0);
+        mViewPager.setPageTransformer(true, new DepthPageTransformer());
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
