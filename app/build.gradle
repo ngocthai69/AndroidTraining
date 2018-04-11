@@ -28,4 +28,6 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     // Library Support Design
     implementation 'com.android.support:design:27.1.1'
+    // card view
+    implementation 'com.android.support:cardview-v7:27.1.1'
 }

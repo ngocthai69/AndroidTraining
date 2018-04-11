@@ -26,7 +26,7 @@ public class TabLayoutActivity extends BaseActivity {
         mToolbar = findViewById(R.id.toolbar);
         mTabLayout = findViewById(R.id.tabs);
         mViewPager = findViewById(R.id.viewpager);
-        mIndicator = findViewById(R.id.indicators);
+        mIndicator = findViewById(R.id.indicator);
     }
 
     @Override

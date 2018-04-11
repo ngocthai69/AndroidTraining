@@ -26,7 +26,7 @@
             app:tabMode="fixed" />
     </android.support.design.widget.AppBarLayout>
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
@@ -42,13 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true" />
 
-        <android.thaihn.androidadvance.tablayout.CircleIndicator
-            android:id="@+id/indicators"
-            android:layout_width="fill_parent"
-            android:layout_height="40dp"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="50dp" />
-    </RelativeLayout>
+    </FrameLayout>
 
 
 </android.support.design.widget.CoordinatorLayout>

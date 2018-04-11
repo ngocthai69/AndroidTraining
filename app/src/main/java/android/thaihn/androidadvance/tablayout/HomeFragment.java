@@ -5,12 +5,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.thaihn.androidadvance.BaseFragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
 import android.thaihn.androidadvance.R;
-import android.widget.TextView;
+import android.view.View;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,9 +50,11 @@ public class HomeFragment extends BaseFragment {
 
     @Override
     protected void initVariables(Bundle saveInstanceState, View rootView) {
+
     }
 
     @Override
     protected void initData(Bundle saveInstanceState) {
     }
+
 }
