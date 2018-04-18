@@ -127,7 +127,7 @@ public class ContactAdapter extends RecyclerView.Adapter<ContactAdapter.ViewHold
     // sub ViewHolder
     public class ItemViewHolder extends ViewHolder {
 
-        public ImageView imageAvatar;
+        public CircleImageView imageAvatar;
         public TextView textName, textEmail;
         public CardView cardContact;
 
